@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Михаил](https://up.htmlacademy.ru/htmlcss/25/user/1080459).
-* Наставник: `Неизвестно`.
+* Наставник: `Сергей Артёмов` (https://htmlacademy.ru/profile/firefoxic).
 
 ---
 
