@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
-* Студент: [Михаил Кузнецов] (https://up.htmlacademy.ru/htmlcss/25/user/1080459).
-* Наставник: [Сергей Артёмов] (https://htmlacademy.ru/profile/firefoxic).
+* Студент: [Михаил Кузнецов](https://up.htmlacademy.ru/htmlcss/25/user/1080459).
+* Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic).
 
 ---
 
