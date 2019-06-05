@@ -1,8 +1,95 @@
+@font-face{
+  font-family: Roboto;
+  src: url(../fonts/roboto.woff);
+}
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+body {
+  font-family: Roboto;
+  color: white;
+  font-size: 16px;
+  background-color:#8996a6;
+}
+.site-navigation {
+  list-style: none;
+}
+.site-navigation a {
+  color: white;
+  font-size:16px;
+  line-height: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.user-navigation form{
+  display:none;
+}
+.cart-content {
+  display:none;
+}
+.worktime {
+  font-size: 14px;
+  line-height: 16px;
+}
+.phone{
+  font-size: 22px;
+  line-height: 24px;
+}
+.slider {
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
+.features {
+  background-image: url("/img/features.jpg")
+}
+.features h2 {
+  color:#323232;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+}
+.features p {
+  color:#323232;
+  font-size:16px;
+  line-height: 22px;
+}
 .news {
     background-image: url("../img/strawberry.png");
     width:560px;
     height:220px;
 }
+.news h1 {
+  font-size:16px;
+}
+.news a {
+  font-size:24px;
+  font-weight: bold;
+  color:#323232;
+}
+.subscribe {
+  width:560px;
+  height:220px;
+  font-size: 16px;
+  color:#5a5a5a;
+}
+.breadcrumbs a{
+  color:white;
+  font-size:14px;
+  line-height: 16px;
+}
+.catalog h2 {
+  font-size: 35px;
+  line-height: 41px;
+ }
+.catalog-item h3 {
+  font-size:16px;
+}
+.catalog-item b {
+  font-size:45px;
+}
+
 .visually-hidden {
     position:absolute;
     width: 1px;
@@ -12,4 +99,15 @@
     padding: 0;
     clip: rect(0 0 0 0);
     overflow:hidden;
+}
+.about-us a {
+  font-size:13px;
+  color: white;
+}
+.footer-copyright p {
+  font-size: 12px;
+  color:#fefefe;
+}
+.feedback-form {
+  display: none;
 }
