@@ -1,15 +1,94 @@
-@font-face{
-  font-family: Roboto;
-  src: url(../fonts/roboto.woff);
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Thin'), local('Roboto-Thin'), url('Robotothin.woff2') format('woff2'), url('Robotothin.woff') format('woff'), url('Robotothin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
 }
-h2 {
-  font-size: 24px;
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url('Robotothinitalic.woff2') format('woff2'), url('Robotothinitalic.woff') format('woff'), url('Robotothinitalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Light'), local('Roboto-Light'), url('Robotolight.woff2') format('woff2'), url('Robotolight.woff') format('woff'), url('Robotolight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url('Robotolightitalic.woff2') format('woff2'), url('Robotolightitalic.woff') format('woff'), url('Robotolightitalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'), url('Roboto.woff2') format('woff2'), url('Roboto.woff') format('woff'), url('Roboto.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Italic'), local('Roboto-Italic'), url('Robotoitalic.woff2') format('woff2'), url('Robotoitalic.woff') format('woff'), url('Robotoitalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Medium'), local('Roboto-Medium'), url('Robotomedium.woff2') format('woff2'), url('Robotomedium.woff') format('woff'), url('Robotomedium.ttf') format('truetype');
   font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url('Robotomediumitalic.woff2') format('woff2'), url('Robotomediumitalic.woff') format('woff'), url('Robotomediumitalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('Robotobold.woff2') format('woff2'), url('Robotobold.woff') format('woff'), url('Robotobold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url('Robotobolditalic.woff2') format('woff2'), url('Robotobolditalic.woff') format('woff'), url('Robotobolditalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Black'), local('Roboto-Black'), url('Robotoblack.woff2') format('woff2'), url('Robotoblack.woff') format('woff'), url('Robotoblack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url('Robotoblackitalic.woff2') format('woff2'), url('Robotoblackitalic.woff') format('woff'), url('Robotoblackitalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+img { max-width: 100% }
+a { text-decoration: none }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 body {
   font-family: Roboto;
   color: white;
   font-size: 16px;
+  margin: 0;
   background-color:#8996a6;
 }
 .site-navigation {
@@ -17,32 +96,34 @@ body {
 }
 .site-navigation a {
   color: white;
-  font-size:16px;
+  font-size: 16px;
   line-height: 18px;
   font-weight: bold;
   text-decoration: none;
 }
 .user-navigation form{
-  display:none;
+  display: none;
 }
 .cart-content {
-  display:none;
+  display: none;
 }
 .worktime {
   font-size: 14px;
   line-height: 16px;
 }
 .phone{
+  color:white;
   font-size: 22px;
   line-height: 24px;
 }
 .slider {
   font-size: 60px;
+  line-height: 60.5px;
   font-weight: bold;
   color: white;
 }
 .features {
-  background-image: url("/img/features.jpg")
+  background-image: url("../img/features.jpg")
 }
 .features h2 {
   color:#323232;
@@ -52,16 +133,17 @@ body {
 }
 .features p {
   color:#323232;
-  font-size:16px;
+  font-size: 16px;
   line-height: 22px;
 }
 .news {
     background-image: url("../img/strawberry.png");
-    width:560px;
-    height:220px;
+    width: 560px;
+    height: 220px;
 }
-.news h1 {
-  font-size:16px;
+.news h2 {
+    font-size: 16px;
+    line-height: 22px;
 }
 .news a {
   font-size:24px;
@@ -69,39 +151,31 @@ body {
   color:#323232;
 }
 .subscribe {
-  width:560px;
-  height:220px;
+  width: 560px;
+  height: 220px;
   font-size: 16px;
   color:#5a5a5a;
 }
 .breadcrumbs a{
   color:white;
-  font-size:14px;
+  font-size: 14px;
   line-height: 16px;
+}
+.catalog-list{
+  list-style: none;
 }
 .catalog h2 {
   font-size: 35px;
   line-height: 41px;
  }
 .catalog-item h3 {
-  font-size:16px;
+  font-size: 16px;
 }
 .catalog-item b {
-  font-size:45px;
-}
-
-.visually-hidden {
-    position:absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow:hidden;
+  font-size: 45px;
 }
 .about-us a {
-  font-size:13px;
+  font-size: 13px;
   color: white;
 }
 .footer-copyright p {
