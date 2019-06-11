@@ -9,12 +9,20 @@
 
 <body>
   <header class="main-header">
-    <nav class="main-navigation-menu">
+    <nav class="main-navigation">
       <a class="main-header-logo">
         <img src="../img/gllacy.svg" width="154" height="64" alt="Логотип GlacyShop">
       </a>
       <ul class="site-navigation">
-        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="catalog.html" class="menu-catalog">Каталог</a>
+          <ul class="sub-menu-catalog">
+            <li><a href="#nowhere">Новинки</a></li>
+            <li><a href="#nowhere">Сливочное</a></li>
+            <li><a href="#nowhere">Щербеты</a></li>
+            <li><a href="#nowhere">Фруктовый лед</a></li>
+            <li><a href="#nowhere">Мелорин</a></li>
+          </ul>
+        </li>
         <li><a href=#nowhere>Доставка и оплата</a></li>
         <li><a href=#nowhere>О Компании</a></li>
       </ul>
@@ -25,7 +33,6 @@
             <label for="search-text" class="visually-hidden">Что ищем?</label>
             <input type="text" id="search-text" placeholder="Что ищем?">
           </form>
-
         </li>
         <li class="login-btn">
           <a href="login.html" class="login-link">Вход</a>
@@ -38,7 +45,7 @@
             <input type="submit" value="Войти" id="enter-btn">
           </form>
         </li>
-        <li class="cart-btn">
+        <li class="cart-btn visually-hidden">
           <a href="cart.html" class="cart-link">Корзина</a>
           <div class="cart-content">
             <ul>
@@ -69,6 +76,7 @@
   </header>
   <main class="container">
     <section class="slider">
+      <img class="slider-item" src="../img/gllacy-1.png" width="1045" height="881" alt="Мороженое Глейси">
       <b>Крем-брюле и пломбир с малиновым джемом</b>
       <ul class="slider-btns">
         <li class="slider-radio">
@@ -87,6 +95,7 @@
           </button>
         </li>
       </ul>
+      <a href="#nowhere" class="givemeboth">Давайте оба!</a>
     </section>
     <section class="promo"></section>
     <section class="goods"></section>
@@ -109,28 +118,28 @@
         растаять в пути и позволяет сохранить превосходный вкус
       </p>
     </section>
-    <section class="news">
-      <h2>Новое в нашем блоге</h2>
-      <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-    </section>
-    <section class="subscribe">
-      <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
-        Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <input type="email" placeholder="Электронная почта">
-        <input type="submit" value="Отправить">
-      </form>
-    </section>
+    <div class="content-columns">
+      <section class="news">
+        <h2>Новое в нашем блоге</h2>
+        <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+      </section>
+      <section class="subscribe">
+        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
+          Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <input type="email" placeholder="Электронная почта">
+          <input type="submit" value="Отправить">
+        </form>
+      </section>
+    </div>
   </main>
   <footer class="main-footer">
-    <div class="footer-social">
-      <ul>
-        <li><a class="social-button-twitter" href="#">Твиттер</a></li>
-        <li><a class="social-button-instagram" href="#">Инстаграм</a></li>
-        <li><a class="social-button-facebook" href="#">Фейсбук</a></li>
-        <li><a class="social-button-vkontakte" href="#">Вконтакте</a></li>
-      </ul>
-    </div>
+    <ul class="social-icons">
+      <li><a class="social twitter" href="#">Твиттер</a></li>
+      <li><a class="social instagram" href="#">Инстаграм</a></li>
+      <li><a class="social facebook" href="#">Фейсбук</a></li>
+      <li><a class="social vkontakte" href="#">Вконтакте</a></li>
+    </ul>
     <div class="about-us">
       <span>&hearts;</span>
       <a href="#"><b>Для поставщиков</b></a>
