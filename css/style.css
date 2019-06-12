@@ -53,9 +53,9 @@ a { text-decoration: none }
   overflow: hidden;
 }
 body {
+  width: 1200px;
   margin: 0 auto;
   padding: 0;
-  width: 1200px;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -63,11 +63,22 @@ body {
   background-color:#8996a6;
   border: 1px solid black;
 }
-body > * {
-  outline: 1px solid red;
+.site-wrapper {
+  min-width: 940px;
+  background-color: #849d8f;
+  background-image: url("../img/gllacy-1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
 }
-body > * > * {
-  outline: 1px solid green;
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
 }
 .main-header {
   margin: 0 auto;
@@ -101,7 +112,7 @@ body > * > * {
   list-style: none;
 }
 .site-navigation li:hover .sub-menu-catalog {
-  display:block;
+  display: block;
 }
 .worktime {
   font-size: 14px;
@@ -114,45 +125,139 @@ body > * > * {
 }
 .slider {
   position: relative;
-  z-index:-1;
-  margin-top:-95px;
+  padding-top: 321px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.slide-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+
   font-size: 60px;
-  line-height: 60.5px;
-  font-weight: bold;
-  color: white;
+  line-height: 60px;
+  font-weight: 800;
 }
-.slider b {
-  position: absolute;
-  width:700px;
-  top:390px;
-  left:180px;
+.slide {
+  display: none;
 }
-.givemeboth {
-  display: block;
-  width: 280px;
-  height: 65px;
-  color: white;
-  font-family: Roboto;
-  font-size: 32px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.38;
-  letter-spacing: normal;
+.button {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
   text-align: center;
-  color: var(--white-two);
-  text-align: center;
+  color: #ffffff;
+  vertical-align: top;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 50px;
-  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
-  background-image: linear-gradient(to top, #e74a35, #f26843);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+  cursor: pointer;
 }
-.givemeboth:hover {
-  box-shadow: 0px 2px 2px 0 #ac1000;
-  background-image: linear-gradient(to top, #e74a35, #f26843), linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+.slide-button {
+  padding: 12px 44px;
 }
-.givemeboth:active {
-  box-shadow: inset 0px 2px 2px 0 #942718;
-  background-image: linear-gradient(to bottom, #e74a35, #f26843), linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
+.promo-button {
+  padding: 12px 23px;
+  font-size: 18px;
+  line-height: 24px;
+}
+.button:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+.button:active {
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+.slider-controls {
+  position: absolute;
+  bottom: 63px;
+  left: 0;
+  z-index: 20;
+  font-size: 0;
+}
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  vertical-align: top;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#product-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/gllacy-1.png");
+}
+
+#product-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/gllacy-2.png");
+}
+
+#product-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/gllacy-3.png");
+}
+
+#product-1:checked ~ .site-wrapper #slide1,
+#product-2:checked ~ .site-wrapper #slide2,
+#product-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"] {
+  background-color: #ffffff;
+}
+.promo {
+  margin-bottom: 40px;
+}
+.promo-items {
+  display: flex;
+  justify-content:space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.promo-item {
+  padding-left: 20px;
+}
+.promo-rapsberry {
+  background: url(../img/rapsberry.jpg) no-repeat;
+  width: 560px;
+  border-radius: 20px;
+}
+.promo-chocolate {
+  background: url(../img/chocolate.jpg) no-repeat;
+  width: 560px;
+  border-radius: 20px;
+}
+.promo-item h3 {
+  font-size: 35px;
+  line-height: 41px;
+  margin-top: 23px;
+  margin-bottom: 23px;
+}
+.promo p {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: bold;
 }
 .features {
   background-image: url("../img/features.jpg")
@@ -172,7 +277,7 @@ body > * > * {
   display: flex;
 }
 .news {
-    background-image: url("../img/strawberry.png");
+    background-image: url("../img/strawberry.jpg");
     width: 560px;
     height: 220px;
 }
@@ -181,7 +286,7 @@ body > * > * {
     line-height: 22px;
 }
 .news a {
-  font-size:24px;
+  font-size: 24px;
   font-weight: bold;
   color:#323232;
 }
@@ -191,32 +296,47 @@ body > * > * {
   font-size: 16px;
   color:#5a5a5a;
 }
-.breadcrumbs a{
-  color:white;
-  font-size: 14px;
-  line-height: 16px;
-}
-.catalog-list{
-  list-style: none;
-}
 .catalog h2 {
   font-size: 35px;
   line-height: 41px;
  }
+.breadcrumbs a {
+  color:white;
+  font-size: 14px;
+  line-height: 16px;
+}
+.catalog-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+.catalog-item {
+  position: relative;
+  margin-left: 25px;
+}
+.catalog-item img {
+  border-radius: 50%;
+}
 .catalog-item h3 {
   font-size: 16px;
+  width: 267px;
 }
 .catalog-item b {
   font-size: 45px;
+  position: absolute;
+  left: 0px;
+  top: 220px;
 }
 .about-us a {
   font-size: 13px;
   color: white;
 }
-.main-footer {
+.main-footer  {
   display: flex;
 }
-.social-icons{
+.social-icons {
   display: flex;
   list-style: none;
 }
