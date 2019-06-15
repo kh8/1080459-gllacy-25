@@ -45,7 +45,7 @@ img {
   height: auto;
 }
 a { text-decoration: none }
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -84,6 +84,7 @@ body {
 }
 .main-header {
   margin: 0 auto;
+  padding: 10px 20px;
 }
 .main-navigation {
   display: flex;
@@ -96,11 +97,6 @@ body {
   list-style: none;
   position: relative;
 }
-.user-navigation {
-  display: flex;
-}
-
-
 .site-navigation > li, .user-navigation li {
   display: inline-block;
   vertical-align: top;
@@ -123,6 +119,15 @@ body {
 }
 .site-navigation li:hover .sub-menu-catalog {
   display: block;
+}
+.user-navigation {
+  display: flex;
+}
+.user-navigation a {
+  display: block;
+  margin-right: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
 }
 .search-btn a {
   display: block;
@@ -278,9 +283,10 @@ body {
 }
 .features {
   padding: 20px;
-  margin: 0px 27px;
+  margin: 0px 27px 40px;
   border-radius: 15px;
   background: url("../img/features.jpg") no-repeat;
+  background-size: cover;
 }
 .features-list {
   display: flex;
@@ -293,13 +299,15 @@ body {
 }
 .feature img {
   position: absolute;
+  left: 0px;
+  top: 0px;
 }
 .features h2 {
-  margin: 0;
+  margin: 0 0 10px;
   color:#323232;
   font-size: 24px;
   line-height: 32px;
-  font-weight: 500;
+  font-weight: bold;
 }
 .features p {
   display: block;
@@ -365,6 +373,7 @@ body {
   line-height: 16px;
 }
 .catalog-items {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   margin:0;
@@ -387,6 +396,15 @@ body {
   position: absolute;
   left: 0px;
   top: 220px;
+}
+.hit::before {
+  content:"";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 61px;
+  height: 61px;
+  background: url("../img/hit.svg") no-repeat 0 0;
 }
 .about-us a {
   font-size: 13px;
