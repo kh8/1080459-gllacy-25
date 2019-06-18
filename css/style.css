@@ -87,7 +87,9 @@ body {
   padding: 10px 20px;
 }
 .main-navigation {
+  position: relative;
   display: flex;
+  align-items: center;
 }
 .site-navigation {
   display: flex;
@@ -122,28 +124,39 @@ body {
 }
 .user-navigation {
   display: flex;
+  margin-right: 0px;
+  margin-left: auto;
 }
 .user-navigation a {
   display: block;
-  margin-right: 20px;
-  border: 1px solid black;
-  border-radius: 15px;
+  padding: 7px 10px;
+  margin-left: 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 16px;
+  color: white;
+  background-color: rgba(255,255,255,0.2);
 }
-.search-btn a {
-  display: block;
-  width: 33px;
-  height: 33px;
-  background: url("../img/search.svg") rgba(200, 207, 45, 0.2) no-repeat;
-  font-size: 0;
+.time-and-tel {
+  position: absolute;
+  right:0px;
+  bottom: -40px;
+  width: 200px;
+  text-align: right;
 }
 .worktime {
+  display: block;
   font-size: 14px;
   line-height: 16px;
+  font-weight: bold;
 }
-.phone{
+.phone {
   color:white;
   font-size: 22px;
   line-height: 24px;
+  font-weight: bold;
 }
 .slider {
   position: relative;
