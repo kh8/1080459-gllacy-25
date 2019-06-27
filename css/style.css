@@ -162,9 +162,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   position: absolute;
-  top: 400px;
+  top: 200px;
   right: 50px;
-  z-index:2;
+  z-index: 2;
   justify-content: space-between;
   width: 277px;
   padding: 18px;
@@ -192,6 +192,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   position: absolute;
+  z-index: 30;
   right: 300px;
   width: 540px;
   padding: 10px;
@@ -235,10 +236,30 @@ body {
   white-space: nowrap;
 }
 .delete-cart-item-btn {
+  position: relative;
   align-self: center;
   margin-right: 10px;
-  width: 18px;
-  height: 18px;
+  width: 11px;
+  height: 11px;
+  border: none;
+  font-size: 0px;
+  background-color: transparent;
+}
+.delete-cart-item-btn::before,
+.delete-cart-item-btn::after {
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  width: 15px;
+  height: 1px;
+  content: "";
+  background-color: #323232;
+}
+.delete-cart-item-btn::before {
+  transform: rotate(45deg);
+}
+.delete-cart-item-btn::after {
+  transform: rotate(-45deg);
 }
 .price-weight {
   display: flex;
@@ -322,6 +343,9 @@ body {
   padding: 12px 44px;
 }
 .promo-button {
+  position: absolute;
+  right: 20px;
+  bottom: 23px;
   padding: 12px 23px;
   font-size: 18px;
   line-height: 24px;
@@ -389,7 +413,8 @@ body {
   list-style: none;
 }
 .promo-item {
-  padding-left: 20px;
+  position: relative;
+  padding: 20px 20px 50px;
 }
 .promo-rapsberry {
   background: url(../img/rapsberry.jpg) no-repeat;
@@ -404,8 +429,7 @@ body {
 .promo-item h3 {
   font-size: 35px;
   line-height: 41px;
-  margin-top: 23px;
-  margin-bottom: 23px;
+  margin: 0;
 }
 .promo p {
   font-size: 18px;
@@ -499,6 +523,18 @@ body {
   border: solid 1px rgba(178, 178, 178, 0.52);
   background-color: #f8f7f4;
 }
+.gllacy-form input {
+  font-weight: bold;
+}
+.gllacy-form input::placeholder {
+  font-weight: normal;
+}
+.gllacy-form input:hover {
+  border: solid 2px rgba(154, 154, 154, 0.52);
+}
+.gllacy-form input:focus {
+  border: solid 2px rgba(46, 136, 228, 0.52);
+}
 .feedback-form {
   position: relative;
   display: flex;
@@ -530,10 +566,32 @@ body {
 }
 .feedback-close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   width: 18px;
   height: 18px;
+  border: none;
+  font-size: 0px;
+  background-color: transparent;
+
+}
+.feedback-close-btn::before,
+.feedback-close-btn::after
+ {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 19px;
+  height: 2px;
+  content: "";
+  background-color: #323232;
+  transform: rotate(45deg);
+}
+.feedback-close-btn::before {
+  transform: rotate(45deg);
+}
+.feedback-close-btn::after {
+  transform: rotate(-45deg);
 }
 .feedback-btn {
   margin-top: 20px;
