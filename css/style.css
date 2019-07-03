@@ -306,6 +306,7 @@ body {
   height: 11px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .delete-cart-item-btn::before {
   position: absolute;
