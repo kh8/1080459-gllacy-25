@@ -16,10 +16,10 @@
             <img src="img/gllacy.svg" width="154" height="64" alt="Логотип GlacyShop">
           </a>
           <ul class="site-navigation">
-            <li class="sub-on-hover"><a href="catalog.html" class="site-nav-link menu-catalog catalog-page">Каталог</a>
+            <li class="sub-on-hover"><a href="#nowhere" class="site-nav-link menu-catalog catalog-page">Каталог</a>
               <ul class="sub-menu-catalog">
                 <li class="sub-menu-elem"><a href="#nowhere"><b>Новинки</b></a></li>
-                <li class="sub-menu-elem"><a href="#nowhere">Сливочное</a></li>
+                <li class="sub-menu-elem sub-menu-elem-current"><a href="catalog.html">Сливочное</a></li>
                 <li class="sub-menu-elem"><a href="#nowhere">Щербеты</a></li>
                 <li class="sub-menu-elem"><a href="#nowhere">Фруктовый лед</a></li>
                 <li class="sub-menu-elem"><a href="#nowhere">Мелорин</a></li>
@@ -70,16 +70,13 @@
               </form>
             </li>
             <li class="cart-btn">
-                <a class="cart-link" href="#nowhere"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-                    viewBox="0 0 21 20">
-                    <g fill="#FFF">
-                      <path
-                        d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" />
-                      <circle cx="6.984" cy="18" r="2" />
-                      <circle cx="15.984" cy="18" r="2" />
-                    </g>
-                  </svg>
-                  Корзина</a>
+                <a class="cart-link" href="#nowhere"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+                  <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/>
+                  <circle cx="6.984" cy="18" r="2" fill="#343434"/>
+                  <circle cx="15.984" cy="18" r="2" fill="#343434"/>
+                  <path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/>
+              </svg>
+                  2 товара</a>
                 <div class="cart-content visually-hidden">
                   <ul>
                     <li class="cart-item">
@@ -126,13 +123,13 @@
                 <span class="filter-label">Сортировка:</span>
                 <select name="sort" class="sorting-filter-select">
                   <option value="popularity">по популярности</option>
-                  <option value="inexpensive-first">сначала недорогия</option>
+                  <option value="inexpensive-first">сначала недорогие</option>
                   <option value="expensive-first">сначала дорогие</option>
                   <option value="fattiness">по жирности</option>
                 </select>
               </div>
               <div class="gllacy-filter price-filter">
-                <span class="filter-label">Цена: 100руб. - 500 руб.</span>
+                <span class="filter-label">Цена: 100&nbsp;руб. &ndash; 500 руб.</span>
                 <div class="range-controls">
                   <div class="scale">
                     <div class="bar"></div>
@@ -375,6 +372,7 @@
     var feedback_close_btn = document.querySelector(".feedback-close-btn");
     var cart_btn = document.querySelector(".cart-btn");
     var cart_form = document.querySelector(".cart-content");
+    var delete_cart_item = document.querySelector(".delete-cart-item-btn");
     search_link.addEventListener("mouseover", function(evt) {
       evt.preventDefault();
       search_form.classList.remove("visually-hidden");
@@ -399,14 +397,19 @@
       evt.preventDefault();
       feedback_form.classList.remove("visually-hidden");
     })
+    cart_btn.addEventListener("mouseover", function(evt) {
+      evt.preventDefault();
+      cart_form.classList.remove("visually-hidden");
+    })
+    cart_btn.addEventListener("mouseout", function(evt) {
+      evt.preventDefault();
+      cart_form.classList.add("visually-hidden");
+    })
     feedback_close_btn.addEventListener("click", function(evt) {
       evt.preventDefault();
       feedback_form.classList.add("visually-hidden");
     })
-    cart_btn.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      cart_form.classList.toggle("visually-hidden");
-    })
+
   </script>
 </body>
 

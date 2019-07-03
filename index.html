@@ -19,10 +19,10 @@
             <img src="img/gllacy.svg" width="154" height="64" alt="Логотип GlacyShop">
           </a>
           <ul class="site-navigation">
-            <li class="sub-on-hover"><a href="catalog.html" class="site-nav-link menu-catalog">Каталог</a>
+            <li class="sub-on-hover"><a href="#nowhere" class="site-nav-link menu-catalog">Каталог</a>
               <ul class="sub-menu-catalog">
                 <li class="sub-menu-elem"><a href="#nowhere"><b>Новинки</b></a></li>
-                <li class="sub-menu-elem"><a href="#nowhere">Сливочное</a></li>
+                <li class="sub-menu-elem"><a href="catalog.html">Сливочное</a></li>
                 <li class="sub-menu-elem"><a href="#nowhere">Щербеты</a></li>
                 <li class="sub-menu-elem"><a href="#nowhere">Фруктовый лед</a></li>
                 <li class="sub-menu-elem"><a href="#nowhere">Мелорин</a></li>
@@ -90,7 +90,7 @@
                         корзины</span></button>
                     <img src="img/product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                     <p>Пломбир с апельсиновым джемом</p>
-                    <span class="price-weight">1.5 кг x&nbsp<span class="grey-price">200 руб</span></span>
+                    <span class="price-weight">1.5 кг x&nbsp;<span class="grey-price">200 руб</span></span>
                     <span class="total-price">300 руб.</span>
                   </li>
                   <li class="cart-item">
@@ -99,7 +99,7 @@
                     <img src="img/product-3.jpg" width="33" height="33"
                       alt="Клубничный пломбир с присыпкой из белого шоколада">
                     <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                    <span class="price-weight">1.5 кг x&nbsp<span class="grey-price"> 300 руб</span></span>
+                    <span class="price-weight">1.5 кг x&nbsp;<span class="grey-price"> 300 руб</span></span>
                     <span class="total-price">450 руб.</span>
                   </li>
                 </ul>
@@ -231,6 +231,7 @@
                 растаять в пути и позволяет сохранить превосходный вкус
               </p>
             </div>
+          </div>
         </section>
         <div class="content-columns">
           <section class="news">
@@ -238,6 +239,7 @@
             <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
           </section>
           <section class="subscribe">
+            <h2 class="visually-hidden">Подпишитесь на нашу рассылку</h2>
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
               Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <form action="https://echo.htmlacademy.ru" method="POST" class="subscribe-form">
@@ -255,15 +257,15 @@
             <label for="your-email" class="visually-hidden">Ваша почта для ответа?</label>
             <input type="email" id="your-email" name="email" placeholder="Ваша почта для ответа?">
             <label for="your-message" class="visually-hidden">Напишите что-нибудь</label>
-            <input type="textarea" id="your-message" name="message" placeholder="Напишите что-нибудь">
+            <textarea id="your-message" name="message" placeholder="Напишите что-нибудь"></textarea>
             <label for="submit-btn" class="visually-hidden">Отправить</label>
             <input type="submit" id="submit-btn" name="submit" class="button feedback-btn" value="Отправить">
           </form>
           <div class="contacts">
-              <p>Адрес главного офиса и офлайн-магазина:<br><b>ул.Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-              <p>Для заказов по телефону:<br> <b>8 812 450-25-25<br></b> (с 10 до 20 ежедневно)</p>
-              <button class="button contact-form-btn">Форма обратной связи</button>
-           </div>
+            <p>Адрес главного офиса и офлайн-магазина:<br><b>ул.Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+            <p>Для заказов по телефону:<br> <b>8 812 450-25-25<br></b> (с 10 до 20 ежедневно)</p>
+            <button class="button contact-form-btn">Форма обратной связи</button>
+          </div>
 
         </section>
       </main>
@@ -326,35 +328,39 @@
     var cart_btn = document.querySelector(".cart-btn");
     var cart_form = document.querySelector(".cart-content");
     var delete_cart_item = document.querySelector(".delete-cart-item-btn");
-    search_link.addEventListener("mouseover", function(evt) {
+    search_link.addEventListener("mouseover", function (evt) {
       evt.preventDefault();
       search_form.classList.remove("visually-hidden");
     });
-    search_link.addEventListener("mouseout", function(evt) {
+    search_link.addEventListener("mouseout", function (evt) {
       evt.preventDefault();
       search_form.classList.add("visually-hidden");
     });
-    login_link.addEventListener("mouseover", function(evt) {
+    login_link.addEventListener("mouseover", function (evt) {
       evt.preventDefault();
       login_form.classList.toggle("visually-hidden");
     });
-    login_link.addEventListener("mouseout", function(evt) {
+    login_link.addEventListener("mouseout", function (evt) {
       evt.preventDefault();
       login_form.classList.toggle("visually-hidden");
     });
-    contact_link.addEventListener("click", function(evt) {
+    contact_link.addEventListener("click", function (evt) {
       evt.preventDefault();
       feedback_form.classList.remove("visually-hidden");
     });
-    feedback_close_btn.addEventListener("click", function(evt) {
+    feedback_close_btn.addEventListener("click", function (evt) {
       evt.preventDefault();
       feedback_form.classList.add("visually-hidden");
     });
-    cart_btn.addEventListener("click", function(evt) {
+    cart_btn.addEventListener("mouseover", function(evt) {
       evt.preventDefault();
-      cart_form.classList.toggle("visually-hidden");
-    });
-    delete_cart_item.addEventListener("click", function(evt) {
+      cart_form.classList.remove("visually-hidden");
+    })
+    cart_btn.addEventListener("mouseout", function(evt) {
+      evt.preventDefault();
+      cart_form.classList.add("visually-hidden");
+    })
+    delete_cart_item.addEventListener("click", function (evt) {
       evt.preventDefault();
       delete_cart_item.parentNode.classList.add("visually-hidden");
     })
