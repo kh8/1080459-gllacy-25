@@ -202,12 +202,17 @@ body {
 {
   fill: #000000;
 }
+.search-btn {
+  position: relative;
+}
+.login-btn {
+  position: relative;
+}
 .search-form {
   display: flex;
   position: absolute;
-  top: 60px;
-  right: 40px;
-  z-index: 3;
+  top: 100%;
+  right: 0%;
   width: 321px;
   padding: 10px;
   border-radius: 5px;
@@ -220,8 +225,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   position: absolute;
-  top: 200px;
-  right: 50px;
+  top: 100%;
+  right: 0%;
   z-index: 2;
   justify-content: space-between;
   width: 277px;
@@ -547,6 +552,8 @@ body {
 }
 .subscribe {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
   z-index: 0;
   width: 560px;
   padding: 20px;
@@ -576,7 +583,27 @@ body {
   border-radius: 10px;
   background-color: #f8f7f4;
 }
+.subscribe-btn {
+  display: block;
+  margin-right: 10px;
+  margin-left: auto;
+  padding: 12px 23px;
+  font-size: 18px;
+  line-height: 24px;
+}
+.subscribe-form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.subscribe-email {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 20px;
+}
 .map {
+  display: flex;
+  align-items: center;
   position: relative;
   margin-bottom: 20px;
   width: 1200px;
@@ -588,6 +615,30 @@ body {
   top: 139px;
   left: 266px;
   content: url("../img/icecream-pin.svg");
+}
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  width: 305px;
+  padding: 15px 15px 30px;
+  border-radius: 10px;
+  margin-right: 27px;
+  margin-left: auto;
+  font-size: 14px;
+  color: #323232;
+  background-color: #FFFFFF;
+}
+.contacts b {
+  font-size: 18px;
+}
+.contact-form-btn {
+  display: block;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: auto;
+  padding: 12px 23px;
+  font-size: 18px;
+  line-height: 24px;
 }
 .gllacy-form {
   border: solid 1px rgba(178, 178, 178, 0.52);
@@ -609,7 +660,9 @@ body {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  z-index: 1;
   width: 478px;
+  margin-left: 30%;
   padding: 24px;
   border-radius: 10px;
 }
@@ -642,6 +695,7 @@ body {
   height: 18px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .feedback-close-btn::before {
   position: absolute;

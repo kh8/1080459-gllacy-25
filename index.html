@@ -83,7 +83,7 @@
                   </g>
                 </svg>
                 Корзина</a>
-              <div class="cart-content">
+              <div class="cart-content visually-hidden">
                 <ul>
                   <li class="cart-item">
                     <button class="delete-cart-item-btn" type="button"><span class="visually-hidden">Убрать из
@@ -240,14 +240,14 @@
           <section class="subscribe">
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
               Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form action="https://echo.htmlacademy.ru" method="POST">
-              <input type="email" placeholder="Электронная почта">
-              <input type="submit" value="Отправить">
+            <form action="https://echo.htmlacademy.ru" method="POST" class="subscribe-form">
+              <input type="email" placeholder="Электронная почта" class="subscribe-email">
+              <input type="submit" class="button subscribe-btn" value="Отправить">
             </form>
           </section>
         </div>
         <section class="map">
-          <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form gllacy-form">
+          <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form gllacy-form visually-hidden">
             <h1>Мы обязательно вам ответим</h1>
             <button type="button" class="feedback-close-btn"><span class="visually-hidden">Закрыть</span></button>
             <label for="your-name" class="visually-hidden">Как вас зовут?</label>
@@ -259,6 +259,11 @@
             <label for="submit-btn" class="visually-hidden">Отправить</label>
             <input type="submit" id="submit-btn" name="submit" class="button feedback-btn" value="Отправить">
           </form>
+          <div class="contacts">
+              <p>Адрес главного офиса и офлайн-магазина:<br><b>ул.Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+              <p>Для заказов по телефону:<br> <b>8 812 450-25-25<br></b> (с 10 до 20 ежедневно)</p>
+              <button class="button contact-form-btn">Форма обратной связи</button>
+           </div>
 
         </section>
       </main>
@@ -314,14 +319,43 @@
   <script>
     var search_link = document.querySelector(".search-btn");
     var search_form = document.querySelector(".search-form");
+    var login_link = document.querySelector(".login-btn");
+    var login_form = document.querySelector(".login-form");
+    var contact_link = document.querySelector(".contact-form-btn");
+    var feedback_form = document.querySelector(".feedback-form");
+    var feedback_close_btn = document.querySelector(".feedback-close-btn");
+    var cart_btn = document.querySelector(".cart-btn");
+    var cart_form = document.querySelector(".cart-content");
+    var delete_cart_item = document.querySelector(".delete-cart-item-btn");
     search_link.addEventListener("mouseover", function(evt) {
       evt.preventDefault();
       search_form.classList.remove("visually-hidden");
-    })
+    });
     search_link.addEventListener("mouseout", function(evt) {
       evt.preventDefault();
       search_form.classList.add("visually-hidden");
+    });
+    login_link.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      login_form.classList.toggle("visually-hidden");
+    });
+    contact_link.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      feedback_form.classList.remove("visually-hidden");
+    });
+    feedback_close_btn.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      feedback_form.classList.add("visually-hidden");
+    });
+    cart_btn.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      cart_form.classList.toggle("visually-hidden");
+    });
+    delete_cart_item.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      delete_cart_item.parentNode.classList.add("visually-hidden");
     })
+
   </script>
 </body>
 
