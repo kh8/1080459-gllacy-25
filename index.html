@@ -308,10 +308,10 @@
           <a href="#">Наши документы</a>
           <a href="#">Экологические стандарты</a>
         </div>
-        <div class="footer-copyright">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-copyright">
           <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
           <p>Сделано в HTML Academy © 2019</p>
-        </div>
+        </a>
       </footer>
     </div>
   </div>
@@ -334,7 +334,11 @@
       evt.preventDefault();
       search_form.classList.add("visually-hidden");
     });
-    login_link.addEventListener("click", function(evt) {
+    login_link.addEventListener("mouseover", function(evt) {
+      evt.preventDefault();
+      login_form.classList.toggle("visually-hidden");
+    });
+    login_link.addEventListener("mouseout", function(evt) {
       evt.preventDefault();
       login_form.classList.toggle("visually-hidden");
     });
