@@ -154,7 +154,7 @@
               <h3>Шоколадки даром!</h3>
               <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно
                 бесплатно.
-              </p>>
+              </p>
               <a class="button promo-button" href="#">Хочу шоколадки!</a>
             </li>
           </ul>
@@ -168,6 +168,9 @@
               </a>
               <b>310 ₽/кг</b>
               <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+              <div class="substrate">
+                <a class="button fast-view-btn" href="#nowhere">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="catalog-item hit">
               <a class="hit" href=#nowhere>
@@ -175,6 +178,9 @@
               </a>
               <b>310 ₽/кг</b>
               <h3>Сливочно-кофейное с кусочками шоколада</h3>
+              <div class="substrate">
+                <a class="button fast-view-btn" href="#nowhere">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="catalog-item hit">
               <a class="hit" href=#nowhere>
@@ -183,6 +189,9 @@
               </a>
               <b>310 ₽/кг</b>
               <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+              <div class="substrate">
+                <a class="button fast-view-btn" href="#nowhere">Быстрый просмотр</a>
+              </div>
             </li>
             <li class="catalog-item hit">
               <a class="hit" href=#nowhere>
@@ -191,6 +200,9 @@
               </a>
               <b>310 ₽/кг</b>
               <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+              <div class="substrate">
+                <a class="button fast-view-btn" href="#nowhere">Быстрый просмотр</a>
+              </div>
             </li>
           </ul>
         </section>
@@ -248,22 +260,26 @@
           </section>
         </div>
         <section class="map">
-          <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form gllacy-form visually-hidden">
-            <h1>Мы обязательно вам ответим</h1>
-            <button type="button" class="feedback-close-btn"><span class="visually-hidden">Закрыть</span></button>
-            <label for="your-name" class="visually-hidden">Как вас зовут?</label>
-            <input type="text" id="your-name" name="name" placeholder="Как вас зовут?">
-            <label for="your-email" class="visually-hidden">Ваша почта для ответа?</label>
-            <input type="email" id="your-email" name="email" placeholder="Ваша почта для ответа?">
-            <label for="your-message" class="visually-hidden">Напишите что-нибудь</label>
-            <textarea id="your-message" name="message" placeholder="Напишите что-нибудь"></textarea>
-            <label for="submit-btn" class="visually-hidden">Отправить</label>
-            <input type="submit" id="submit-btn" name="submit" class="button feedback-btn" value="Отправить">
-          </form>
+          <div class="modal">
+            <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form gllacy-form">
+              <h1>Мы обязательно вам ответим</h1>
+              <button type="button" class="feedback-close-btn"><span class="visually-hidden">Закрыть</span></button>
+              <label for="your-name" class="visually-hidden">Как вас зовут?</label>
+              <input type="text" id="your-name" class="feedback-person" name="name" placeholder="Как вас зовут?">
+              <label for="your-email" class="visually-hidden">Ваша почта для ответа?</label>
+              <input type="email" id="your-email" class="feedback-person" name="email"
+                placeholder="Ваша почта для ответа?">
+              <label for="your-message" class="visually-hidden">Напишите что-нибудь</label>
+              <textarea id="your-message" class="feedback-message" name="message"
+                placeholder="Напишите что-нибудь"></textarea>
+              <label for="submit-btn" class="visually-hidden">Отправить</label>
+              <input type="submit" id="submit-btn" name="submit" class="button feedback-btn" value="Отправить">
+            </form>
+          </div>
           <div class="contacts">
             <p>Адрес главного офиса и офлайн-магазина:<br><b>ул.Большая Конюшенная 19/8, Санкт-Петербург</b></p>
             <p>Для заказов по телефону:<br> <b>8 812 450-25-25<br></b> (с 10 до 20 ежедневно)</p>
-            <button class="button contact-form-btn">Форма обратной связи</button>
+            <a class="button contact-form-btn" href="feedback.html">Форма обратной связи</a>
           </div>
 
         </section>
@@ -322,7 +338,7 @@
     var login_link = document.querySelector(".login-btn");
     var login_form = document.querySelector(".login-form");
     var contact_link = document.querySelector(".contact-form-btn");
-    var feedback_form = document.querySelector(".feedback-form");
+    var feedback_form = document.querySelector(".modal");
     var feedback_close_btn = document.querySelector(".feedback-close-btn");
     var cart_btn = document.querySelector(".cart-btn");
     var cart_form = document.querySelector(".cart-content");
@@ -345,11 +361,11 @@
     });
     contact_link.addEventListener("click", function (evt) {
       evt.preventDefault();
-      feedback_form.classList.remove("visually-hidden");
+      feedback_form.classList.add("modal-show");
     });
     feedback_close_btn.addEventListener("click", function (evt) {
       evt.preventDefault();
-      feedback_form.classList.add("visually-hidden");
+      feedback_form.classList.remove("modal-show");
     });
     cart_btn.addEventListener("mouseover", function (evt) {
       evt.preventDefault();
@@ -363,7 +379,6 @@
       evt.preventDefault();
       delete_cart_item.parentNode.classList.add("visually-hidden");
     })
-
   </script>
 </body>
 
