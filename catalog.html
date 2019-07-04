@@ -70,37 +70,39 @@
               </form>
             </li>
             <li class="cart-btn">
-                <a class="cart-link" href="#nowhere"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
-                  <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/>
-                  <circle cx="6.984" cy="18" r="2" fill="#343434"/>
-                  <circle cx="15.984" cy="18" r="2" fill="#343434"/>
-                  <path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/>
-              </svg>
-                  2 товара</a>
-                <div class="cart-content visually-hidden">
-                  <ul>
-                    <li class="cart-item">
-                      <button class="delete-cart-item-btn" type="button"><span class="visually-hidden">Убрать из
-                          корзины</span></button>
-                      <img src="img/product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-                      <p>Пломбир с апельсиновым джемом</p>
-                      <span class="price-weight">1.5 кг x&nbsp<span class="grey-price">200 руб</span></span>
-                      <span class="total-price">300 руб.</span>
-                    </li>
-                    <li class="cart-item">
-                      <button class="delete-cart-item-btn" type="button"><span class="visually-hidden">Убрать из
-                          корзины</span></button>
-                      <img src="img/product-3.jpg" width="33" height="33"
-                        alt="Клубничный пломбир с присыпкой из белого шоколада">
-                      <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                      <span class="price-weight">1.5 кг x&nbsp<span class="grey-price"> 300 руб</span></span>
-                      <span class="total-price">450 руб.</span>
-                    </li>
-                  </ul>
-                  <b>Итого: 750 руб.</b>
-                  <button class="button buy-confirm-button" value="Оформить заказ">Оформить заказ</button>
-                </div>
-              </li>
+              <a class="cart-link" href="#nowhere"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                  viewBox="0 0 21 20">
+                  <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
+                  <circle cx="6.984" cy="18" r="2" fill="#343434" />
+                  <circle cx="15.984" cy="18" r="2" fill="#343434" />
+                  <path fill="#343434"
+                    d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" />
+                </svg>
+                2 товара</a>
+              <div class="cart-content visually-hidden">
+                <ul>
+                  <li class="cart-item">
+                    <button class="delete-cart-item-btn" type="button"><span class="visually-hidden">Убрать из
+                        корзины</span></button>
+                    <img src="img/product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                    <p>Пломбир с апельсиновым джемом</p>
+                    <span class="price-weight">1.5 кг x&nbsp;<span class="grey-price">200 руб</span></span>
+                    <span class="total-price">300 руб.</span>
+                  </li>
+                  <li class="cart-item">
+                    <button class="delete-cart-item-btn" type="button"><span class="visually-hidden">Убрать из
+                        корзины</span></button>
+                    <img src="img/product-3.jpg" width="33" height="33"
+                      alt="Клубничный пломбир с присыпкой из белого шоколада">
+                    <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+                    <span class="price-weight">1.5 кг x&nbsp;<span class="grey-price"> 300 руб</span></span>
+                    <span class="total-price">450 руб.</span>
+                  </li>
+                </ul>
+                <b>Итого: 750 руб.</b>
+                <button class="button buy-confirm-button" value="Оформить заказ">Оформить заказ</button>
+              </div>
+            </li>
 
           </ul>
           <div class="time-and-tel">
@@ -290,7 +292,8 @@
                     <path transform="rotate(-180, 4.12695, 5.99219)" id="svg_1"
                       d="m7.237,5.642l-5.508,-5.509a0.506,0.506 0 1 0 -0.716,0.716l5.15,5.151l-5.151,5.15a0.507,0.507 0 0 0 0.716,0.717l5.509,-5.509a0.504,0.504 0 0 0 0,-0.716z" />
                   </g>
-                </svg></a></li>
+                </svg></a>
+            </li>
             <li class="pagination-item pagination-item-current">
               <a href="#nowhere">1</a>
             </li>
@@ -373,39 +376,39 @@
     var cart_btn = document.querySelector(".cart-btn");
     var cart_form = document.querySelector(".cart-content");
     var delete_cart_item = document.querySelector(".delete-cart-item-btn");
-    search_link.addEventListener("mouseover", function(evt) {
+    search_link.addEventListener("mouseover", function (evt) {
       evt.preventDefault();
       search_form.classList.remove("visually-hidden");
     })
-    search_link.addEventListener("mouseout", function(evt) {
+    search_link.addEventListener("mouseout", function (evt) {
       evt.preventDefault();
       search_form.classList.add("visually-hidden");
     })
-    login_link.addEventListener("mouseover", function(evt) {
+    login_link.addEventListener("mouseover", function (evt) {
       evt.preventDefault();
       login_form.classList.toggle("visually-hidden");
     });
-    login_link.addEventListener("mouseout", function(evt) {
+    login_link.addEventListener("mouseout", function (evt) {
       evt.preventDefault();
       login_form.classList.toggle("visually-hidden");
     });
-    login_link.addEventListener("click", function(evt) {
+    login_link.addEventListener("click", function (evt) {
       evt.preventDefault();
       login_form.classList.toggle("visually-hidden");
     })
-    contact_link.addEventListener("click", function(evt) {
+    contact_link.addEventListener("click", function (evt) {
       evt.preventDefault();
       feedback_form.classList.remove("visually-hidden");
     })
-    cart_btn.addEventListener("mouseover", function(evt) {
+    cart_btn.addEventListener("mouseover", function (evt) {
       evt.preventDefault();
       cart_form.classList.remove("visually-hidden");
     })
-    cart_btn.addEventListener("mouseout", function(evt) {
+    cart_btn.addEventListener("mouseout", function (evt) {
       evt.preventDefault();
       cart_form.classList.add("visually-hidden");
     })
-    feedback_close_btn.addEventListener("click", function(evt) {
+    feedback_close_btn.addEventListener("click", function (evt) {
       evt.preventDefault();
       feedback_form.classList.add("visually-hidden");
     })

@@ -450,6 +450,12 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+.slider-controls label:hover {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  opacity: 0.4;
+  background-color: #f8f7f4;
+}
 #product-1:checked ~ .site-wrapper {
   background-color: #849d8f;
   background-image: url("../img/gllacy-1.png");
