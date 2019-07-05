@@ -690,9 +690,8 @@ body {
 }
 .feedback-form {
   position: fixed;
-  flex-wrap: wrap;
   width: 478px;
-  padding: 25px;
+  padding: 25px 25px 80px;
   border-radius: 10px;
 }
 .feedback-form h1 {
@@ -745,7 +744,11 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 11' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.354.354l10.293 10.293m-10.293 0L10.647.354' fill='none' stroke='%23231F20'/%3E%3C/svg%3E%0A");
 }
 .feedback-btn {
-  margin-top: 20px 10px 0px auto;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin-right: 0px;
+  margin-left: auto;
   padding: 12px 30px;
   font-size: 18px;
   line-height: 24px;
@@ -1090,6 +1093,7 @@ body {
   width: 26px;
   height: 26px;
   color: #ffffff;
+  border-radius: 50%;
 }
 .pagination-item-current a {
   width: 26px;
@@ -1099,12 +1103,11 @@ body {
   background-color: #ffffff;
 }
 .pagination-item a:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: #ffffff;
   background-color: rgba(255,255,255,0.2);
+}
+.pagination-item a:active {
+  color: #000000;
+  background-color: #FFFFFF;
 }
 .prev {
   display: flex;

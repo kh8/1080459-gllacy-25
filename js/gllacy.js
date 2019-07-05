@@ -16,6 +16,7 @@ search_link.addEventListener("mouseout", function (evt) {
   evt.preventDefault();
   search_form.classList.add("visually-hidden");
 });
+
 login_link.addEventListener("mouseover", function (evt) {
   evt.preventDefault();
   login_form.classList.toggle("visually-hidden");
@@ -24,14 +25,18 @@ login_link.addEventListener("mouseout", function (evt) {
   evt.preventDefault();
   login_form.classList.toggle("visually-hidden");
 });
-contact_link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  feedback_form.classList.add("modal-show");
-});
+if (contact_link) {
+  contact_link.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    feedback_form.classList.remove("visually-hidden");
+  })
+}
+if (feedback_close_btn) {
 feedback_close_btn.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedback_form.classList.remove("modal-show");
 });
+}
 cart_btn.addEventListener("mouseover", function (evt) {
   evt.preventDefault();
   cart_form.classList.remove("visually-hidden");
