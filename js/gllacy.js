@@ -28,7 +28,7 @@ login_link.addEventListener("mouseout", function (evt) {
 if (contact_link) {
   contact_link.addEventListener("click", function(evt) {
     evt.preventDefault();
-    feedback_form.classList.remove("visually-hidden");
+    feedback_form.classList.add("modal-show");
   })
 }
 if (feedback_close_btn) {
