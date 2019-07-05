@@ -517,7 +517,7 @@ body {
   font-weight: bold;
 }
 .features {
-  padding: 20px;
+  padding: 15px;
   margin: 0px 27px 40px;
   border-radius: 15px;
   background: url("../img/features.jpg") no-repeat;
@@ -556,12 +556,12 @@ body {
 }
 .content-columns {
   display: flex;
-  margin: 0px 27px 40px;
+  margin: 0px 27px 32px;
 }
 .news {
     background-image: url("../img/strawberry.jpg");
     padding: 20px 200px 20px 20px;
-    margin-right: 20px;
+    margin-right: 26px;
     border-radius: 15px;
     width: 560px;
     height: 220px;
@@ -599,6 +599,9 @@ body {
     #fe9390 28.36px
   );
 }
+.subscribe p {
+  margin-bottom: 0px;
+}
 .subscribe::before {
   content: "";
   position: absolute;
@@ -625,7 +628,7 @@ body {
 }
 .subscribe-email {
   flex-grow: 1;
-  padding: 10px;
+  padding: 15px;
   margin-right: 20px;
 }
 .map {
@@ -689,7 +692,6 @@ body {
   position: fixed;
   flex-wrap: wrap;
   width: 478px;
-  /* z-index: 1; */
   padding: 24px;
   border-radius: 10px;
 }
@@ -764,10 +766,14 @@ body {
       align-items: center;
       background-color: hsla(0, 0%, 0%, 0.5);
 }
+.catalog-filter {
+  margin-top: 8px;
+  padding-left: 25px;
+}
 .catalog-filter-form {
   display: flex;
   align-content: center;
-  padding: 20px 0px;
+  padding: 20px 0px 5px;
   flex-wrap: wrap;
 }
 .gllacy-filter {
@@ -966,14 +972,14 @@ body {
   font-size: 35px;
   line-height: 41px;
   margin: 0;
+  padding-left: 25px;
  }
  .breadcrumbs {
  display: flex;
  justify-content: flex-start;
  flex-wrap: wrap;
- padding: 0;
- margin: 0;
- margin-bottom: 10px;
+ padding: 0px 0px 0px 25px;
+ margin: 15px 0px 0px;
  list-style: none;
 }
 .breadcrumbs li {
@@ -1007,7 +1013,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0px 20px;
+  padding: 0px 10px;
   list-style: none;
 }
 .catalog-item {
@@ -1025,8 +1031,12 @@ body {
 .catalog-item b {
   font-size: 45px;
   position: absolute;
-  left: 0px;
-  top: 220px;
+  left: 5px;
+  top: 225px;
+}
+.kg-span {
+  font-size: 30px;
+  line-height: 45px;
 }
 .hit::before {
   content:"";
@@ -1066,11 +1076,11 @@ body {
   flex-wrap: wrap;
   justify-content: flex-end;
   padding: 0;
-  margin-right: 100px;
+  margin: 35px 25px 55px 0px;
   list-style: none;
 }
 .pagination-item {
-  margin-right: 5px;
+  margin-right: 3px;
   text-align: center;
 }
 .pagination-item a {
@@ -1100,9 +1110,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 15px;
   white-space: nowrap;
-  font-size:0px;
 }
 .prev a,
 .next a {
@@ -1114,7 +1123,7 @@ body {
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  font-size:0px;
+  margin-left: 15px;
 }
 .pagination-disabled svg {
   fill: rgba(255,255,255,0.2);
@@ -1138,6 +1147,7 @@ body {
 .social-icons {
   display: flex;
   align-items: center;
+  padding-left: 30px;
   list-style: none;
 }
 .social {
