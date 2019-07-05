@@ -57,7 +57,7 @@
                 </svg>
                 Вход
               </a>
-              <form class="login-form gllacy-form visually-hidden" action="https://echo.htmlacademy.ru" method="post">
+              <form class="login-form login-form2 gllacy-form visually-hidden" action="https://echo.htmlacademy.ru" method="post">
                 <label for="email-input" class="visually-hidden">Электронная почта</label>
                 <input type="email" id="email-input" name="email" placeholder="Электронная почта">
                 <label for="password-input" class="visually-hidden">Пароль</label>
@@ -405,54 +405,7 @@
       </footer>
     </div>
   </div>
-  <script>
-    var search_link = document.querySelector(".search-btn");
-    var search_form = document.querySelector(".search-form");
-    var login_link = document.querySelector(".login-btn");
-    var login_form = document.querySelector(".login-form");
-    var contact_link = document.querySelector(".contact-form-btn");
-    var feedback_form = document.querySelector(".feedback-form");
-    var feedback_close_btn = document.querySelector(".feedback-close-btn");
-    var cart_btn = document.querySelector(".cart-btn");
-    var cart_form = document.querySelector(".cart-content");
-    var delete_cart_item = document.querySelector(".delete-cart-item-btn");
-    search_link.addEventListener("mouseover", function (evt) {
-      evt.preventDefault();
-      search_form.classList.remove("visually-hidden");
-    })
-    search_link.addEventListener("mouseout", function (evt) {
-      evt.preventDefault();
-      search_form.classList.add("visually-hidden");
-    })
-    login_link.addEventListener("mouseover", function (evt) {
-      evt.preventDefault();
-      login_form.classList.toggle("visually-hidden");
-    });
-    login_link.addEventListener("mouseout", function (evt) {
-      evt.preventDefault();
-      login_form.classList.toggle("visually-hidden");
-    });
-    login_link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      login_form.classList.toggle("visually-hidden");
-    })
-    contact_link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      feedback_form.classList.remove("visually-hidden");
-    })
-    cart_btn.addEventListener("mouseover", function (evt) {
-      evt.preventDefault();
-      cart_form.classList.remove("visually-hidden");
-    })
-    cart_btn.addEventListener("mouseout", function (evt) {
-      evt.preventDefault();
-      cart_form.classList.add("visually-hidden");
-    })
-    feedback_close_btn.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      feedback_form.classList.add("visually-hidden");
-    })
-  </script>
+  <script src="js/gllacy.js"></script>
 </body>
 
 </html>
