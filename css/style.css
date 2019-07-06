@@ -520,7 +520,7 @@ body {
   padding: 15px;
   margin: 0px 27px 40px;
   border-radius: 15px;
-  background: url("../img/features.jpg") no-repeat;
+  background: #EDE0C3 url("../img/features.jpg") no-repeat;
   background-size: cover;
 }
 .features-list {
